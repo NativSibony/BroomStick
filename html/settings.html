@@ -1,0 +1,268 @@
+<html>
+	<head>
+		<title data-i18n="settingsTitle">Settings</title>
+
+		<link rel="stylesheet" href="../css/material.min.css">
+		<link rel="stylesheet" href="../css/settings.css">
+		<link rel="stylesheet" href="../liquid-button/css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/fonts.css"></link>
+	</head>
+	<body>
+		<div class="mdl-progress mdl-js-progress mdl-progress__indeterminate js-loader"></div>
+
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header id="header">
+	    	<!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored js-clear-all">
+	    		<span data-i18n="optCleanAll">Clean All</span>
+			</button> -->
+			<div id="water-button" class="water-button default">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
+					<symbol id="wave">
+						<path d="M420,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C514,6.5,518,4.7,528.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H420z"></path>
+						<path d="M420,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C326,6.5,322,4.7,311.5,2.7C304.3,1.4,293.6-0.1,280,0c0,0,0,0,0,0v20H420z"></path>
+						<path d="M140,20c21.5-0.4,38.8-2.5,51.1-4.5c13.4-2.2,26.5-5.2,27.3-5.4C234,6.5,238,4.7,248.5,2.7c7.1-1.3,17.9-2.8,31.5-2.7c0,0,0,0,0,0v20H140z"></path>
+						<path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
+					</symbol>
+				</svg>
+				<div class="box">
+					<div class="percent" id="indicator">
+						<div class="percentNum" id="count">0</div>
+						<div class="percentB">%</div>
+					</div>
+					<div id="text" class="text">
+						Label
+					</div>
+					<div id="water" class="water">
+						<svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+							<use xlink:href="#wave"></use>
+						</svg>
+						<svg viewBox="0 0 560 20" class="water_wave water_wave_front" id="water_wave_front">
+							<use xlink:href="#wave"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		  </header>
+
+		  <main class="mdl-layout__content">
+		    <div class="page-content">
+
+		    	<h2 class="title" data-i18n="optGeneral">General</h2>
+		    	<table class="mdl-data-table settings-block">
+		    	  <tbody>
+		    	    <tr>
+		    	      <td data-i18n="optGeneralPeriod">Period</td>
+		    	      <td>
+		    	      	<select class="mdl-textfield__input js-option" name="generalPeriod" id="generalPeriod">
+		    	      		<option value="1" data-i18n="optGeneralPeriodHour">Last hour</option>
+		    	      		<option value="24" data-i18n="optGeneralPeriodDay">Last 24 hours</option>
+		    	      		<option value="168" data-i18n="optGeneralPeriodWeek">Last 7 days</option>
+		    	      		<option value="672" data-i18n="optGeneralPeriodMonth">Last 4 weeks</option>
+		    	      		<option value="all" data-i18n="optGeneralPeriodAllTime">All time</option>
+		    	      	</select>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr class="clickable">
+		    	      <td data-i18n="optGeneralHistory">History</td>
+		    	      <td>
+		    	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="generalHistory">
+		    	      	  <input type="checkbox" id="generalHistory" class="mdl-switch__input js-option" value="1" name="generalHistory">
+		    	      	  <span class="mdl-switch__label"></span>
+		    	      	</label>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr class="clickable">
+		    	      <td data-i18n="optGeneralCache">Cache</td>
+		    	      <td>
+		    	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="generalCache">
+		    	      	  <input type="checkbox" id="generalCache" class="mdl-switch__input js-option" name="generalCache">
+		    	      	  <span class="mdl-switch__label"></span>
+		    	      	</label>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr class="clickable">
+		    	      <td data-i18n="optGeneralCookie">Cookie</td>
+		    	      <td>
+		    	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="generalCookies">
+		    	      	  <input type="checkbox" id="generalCookies" class="mdl-switch__input js-option" name="generalCookies">
+		    	      	  <span class="mdl-switch__label"></span>
+		    	      	</label>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr class="clickable">
+		    	      <td data-i18n="optGeneralDownloads">Download List</td>
+		    	      <td>
+		    	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="generalDownloads">
+		    	      	  <input type="checkbox" id="generalDownloads" class="mdl-switch__input js-option" name="generalDownloads">
+		    	      	  <span class="mdl-switch__label"></span>
+		    	      	</label>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr class="clickable">
+		    	      <td>
+		    	      	<span data-i18n="optGeneralStorage">Site Storage</span>
+									<div class="sub-label" data-i18n="optGeneralStorageDesc">
+										The space for a site client settings (ex.: a viewed post on Reddit)
+									</div>
+		    	      </td>
+		    	      <td>
+		    	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="generalStorage">
+		    	      	  <input type="checkbox" id="generalStorage" class="mdl-switch__input js-option" name="generalStorage">
+		    	      	  <span class="mdl-switch__label"></span>
+		    	      	</label>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr class="clickable">
+		    	      <td>
+		    	      	<span data-i18n="optGeneralForms">Form Data</span>
+									<div class="sub-label" data-i18n="optGeneralFormsDesc">
+										The saved logins, passwords, addresses, etc
+									</div>
+		    	      </td>
+		    	      <td>
+		    	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="generalForms">
+		    	      	  <input type="checkbox" id="generalForms" class="mdl-switch__input js-option" name="generalForms">
+		    	      	  <span class="mdl-switch__label"></span>
+		    	      	</label>
+		    	      </td>
+		    	    </tr>
+		    	  </tbody>
+		    	</table>
+
+		    	<h2 class="title" data-i18n="optQuickActions" style="display: none;">Quick Actions</h2>
+		    	<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable settings-block" style="display: none;">
+		    	  <tbody>
+		    	    <tr>
+		    	      <td>
+			    	      <span data-i18n="optQuickActionsSettings">Quick Clear Settings</span>
+			    	      <div class="sub-label" data-i18n="optQuickActionsSettingsDesc">
+			    	          Select "Custom" if you don't want use general settings for quick action
+			    	      </div>
+			    	  	</td>
+		    	      <td>
+		    	      	<select class="mdl-textfield__input js-option js-quick-action" name="quickActionSettings" id="quickActionSettings">
+		    	      		<option value="general" data-i18n="optQuickActionsSettingsDefault">Default</option>
+		    	      		<option value="custom" data-i18n="optQuickActionsSettingsCustom">Custom</option>
+		    	      	</select>
+		    	      </td>
+		    	    </tr>
+
+		    	    <tr>
+		    	      <td data-i18n="optQuickActionsAction">Tab Button Action</td>
+		    	      <td>
+		    	      	<select class="mdl-textfield__input js-option js-quick-action-mode" name="quickActionMode" id="quickActionMode">
+		    	      		<option value="popup" data-i18n="optQuickActionsActionPopup">Open Popup</option>
+		    	      		<option value="site" data-i18n="optQuickActionsActionClearSite">Clear opened site</option>
+		    	      		<option value="all" data-i18n="optQuickActionsActionClearAll">Clear all</option>
+		    	      	</select>
+		    	      </td>
+		    	    </tr>
+		    	  </tbody>
+		    	</table>
+
+					<div class="js-custom-settings">
+			    	<h2 class="title" data-i18n="optCustom">Custom Settings for Quick Action</h2>
+			    	<table class="mdl-data-table settings-block">
+		      	  <tbody>
+		      	    <tr>
+		      	      <td data-i18n="optCustomPeriod">Period</td>
+		      	      <td>
+		      	      	<select class="mdl-textfield__input js-option" name="customPeriod" id="customPeriod">
+		    	      		<option value="1" data-i18n="optGeneralPeriodHour">Last hour</option>
+		    	      		<option value="24" data-i18n="optGeneralPeriodDay">Last 24 hours</option>
+		    	      		<option value="168" data-i18n="optGeneralPeriodWeek">Last 7 days</option>
+		    	      		<option value="672" data-i18n="optGeneralPeriodMonth">Last 4 weeks</option>
+		    	      		<option value="all" data-i18n="optGeneralPeriodAllTime">All time</option>
+		      	      	</select>
+		      	      </td>
+		      	    </tr>
+
+		      	    <tr class="clickable">
+		      	      <td data-i18n="optGeneralHistory">History</td>
+		      	      <td>
+		      	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="customHistory">
+		      	      	  <input type="checkbox" id="customHistory" class="mdl-switch__input js-option" name="customHistory">
+		      	      	  <span class="mdl-switch__label"></span>
+		      	      	</label>
+		      	      </td>
+		      	    </tr>
+
+		      	    <tr class="clickable">
+		      	      <td data-i18n="optGeneralCache">Cache</td>
+		      	      <td>
+		      	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="customCache">
+		      	      	  <input type="checkbox" id="customCache" class="mdl-switch__input js-option" name="customCache">
+		      	      	  <span class="mdl-switch__label"></span>
+		      	      	</label>
+		      	      </td>
+		      	    </tr>
+
+		      	    <tr class="clickable">
+		      	      <td data-i18n="optGeneralCookie">Cookie</td>
+		      	      <td>
+		      	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="customCookies">
+		      	      	  <input type="checkbox" id="customCookies" class="mdl-switch__input js-option" name="customCookies">
+		      	      	  <span class="mdl-switch__label"></span>
+		      	      	</label>
+		      	      </td>
+		      	    </tr>
+
+		      	    <tr class="clickable">
+		      	      <td data-i18n="optGeneralDownloads">Download List</td>
+		      	      <td>
+		      	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="customDownloads">
+		      	      	  <input type="checkbox" id="customDownloads" class="mdl-switch__input js-option" name="customDownloads">
+		      	      	  <span class="mdl-switch__label"></span>
+		      	      	</label>
+		      	      </td>
+		      	    </tr>
+
+		      	    <tr class="clickable">
+		      	      <td>
+		      	      	<span data-i18n="optGeneralStorage">Site Storage</span>
+		  							<div class="sub-label" data-i18n="optGeneralStorageDesc">
+		  								The space for a site client settings (ex.: a viewed post on Reddit)
+		  							</div>
+		      	      </td>
+		      	      <td>
+		      	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="customStorage">
+		      	      	  <input type="checkbox" id="customStorage" class="mdl-switch__input js-option" name="customStorage">
+		      	      	  <span class="mdl-switch__label"></span>
+		      	      	</label>
+		      	      </td>
+		      	    </tr>
+
+		      	    <tr class="clickable">
+		      	      <td>
+		      	      	<span data-i18n="optGeneralForms">Form Data</span>
+		  							<div class="sub-label" data-i18n="optCustomFormsDesc">
+		  								The saved logins, passwords, addresses, etc
+		  							</div>
+		      	      </td>
+		      	      <td>
+		      	      	<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="customForms">
+		      	      	  <input type="checkbox" id="customForms" class="mdl-switch__input js-option" name="customForms">
+		      	      	  <span class="mdl-switch__label"></span>
+		      	      	</label>
+		      	      </td>
+		      	    </tr>
+
+		      	  </tbody>
+			    	</table>
+			    </div>
+
+		    </div>
+		  </main>
+		</div>
+
+		<script src="../js/material.min.js"></script>
+		<script src="../liquid-button/js/script.js"></script>
+		<script src="../js/settings.js"></script>
+	</body>
+</html>

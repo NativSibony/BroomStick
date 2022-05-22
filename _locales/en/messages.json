@@ -1,0 +1,156 @@
+{
+    "extName": {
+        "message": "BroomStick",
+        "description": "Chrome extension name"
+    },
+    "extDescription": {
+        "message": "A simple and lightweight cleaner for developers and users. Simply tap to clean!",
+        "description": "Chrome extension description"
+    },
+    "popupTitle": {
+        "message": "Cleaner popup",
+        "description": "Browser action popup title"
+    },
+    "contextMenu": {
+        "message": "Clean this site",
+        "description": "Page context menu item"
+    },
+
+    "finishedSiteNotificationTitle": {
+        "message": "Cleaning finished"
+    },
+    "finishedSiteNotificationMessage": {
+        "message": "$LIST$ cleaned for $URL$ since $START_TIME$.",
+        "placeholders": {
+            "list": {
+                "content": "$1",
+                "example": "History, Cookies, Downloads"
+            },
+            "url": {
+                "content": "$2",
+                "example": "developer.chrome.com"
+            },
+            "start_time": {
+                "content": "$3",
+                "example": "Tue Jul 22 2018 12:30:00 GMT+0300"
+            },
+            "end_time": {
+                "content": "$4",
+                "example": "Tue Jul 22 2018 12:30:00 GMT+0300"
+            }
+        }
+    },
+
+    "finishedAllNotificationTitle": {
+        "message": "Cleaning finished"
+    },
+    "finishedAllNotificationMessage": {
+        "message": "$LIST$ since $START_TIME$ cleaned.",
+        "placeholders": {
+            "list": {
+                "content": "$1",
+                "example": "History, Cookies, Downloads"
+            },
+            "start_time": {
+                "content": "$2",
+                "example": "Tue Jul 22 2018 12:30:00 GMT+0300"
+            },
+            "end_time": {
+                "content": "$3",
+                "example": "Tue Jul 22 2018 12:30:00 GMT+0300"
+            }
+        }
+    },
+
+    "optCleanAll": {
+        "message": "Clean All"
+    },
+
+    "optGeneral": {
+        "message": "General"
+    },
+    "optGeneralPeriod": {
+        "message": "Period"
+    },
+    "optGeneralPeriodHour": {
+        "message": "Last hour"
+    },
+    "optGeneralPeriodDay": {
+        "message": "Last 24 hours"
+    },
+    "optGeneralPeriodWeek": {
+        "message": "Last 7 days"
+    },
+    "optGeneralPeriodMonth": {
+        "message": "Last 4 weeks"
+    },
+    "optGeneralPeriodAllTime": {
+        "message": "All time"
+    },
+    "optGeneralHistory": {
+        "message": "History"
+    },
+    "optGeneralCache": {
+        "message": "Cache"
+    },
+    "optGeneralCookie": {
+        "message": "Cookie"
+    },
+    "optGeneralDownloads": {
+        "message": "Download List"
+    },
+    "optGeneralStorage": {
+        "message": "Site Storage"
+    },
+    "optGeneralStorageDesc": {
+        "message": "The space for a site client settings (ex.: a viewed post on Reddit)"
+    },
+    "optGeneralForms": {
+        "message": "Form Data"
+    },
+    "optGeneralFormsDesc": {
+        "message": "The saved search queries, addresses, etc"
+    },
+    "optQuickActions": {
+        "message": "Quick Actions"
+    },
+    "optQuickActionsSettings": {
+        "message": "Quick Clear Settings"
+    },
+    "optQuickActionsSettingsDesc": {
+        "message": "Select \"Custom\" if you don't want use general settings for quick action"
+    },
+    "optQuickActionsSettingsDefault": {
+        "message": "Default"
+    },
+    "optQuickActionsSettingsCustom": {
+        "message": "Custom"
+    },
+    "optQuickActionsAction": {
+        "message": "Tab Button Action"
+    },
+    "optQuickActionsActionPopup": {
+        "message": "Open Popup"
+    },
+    "optQuickActionsActionClearSite": {
+        "message": "Clean opened site"
+    },
+    "optQuickActionsActionClearAll": {
+        "message": "Clean all"
+    },
+    "optCustom": {
+        "message": "Quick Action Customs"
+    },
+    "popClearSite": {
+        "message": "Clean this site"
+    },
+    "popClearAll": {
+        "message": "Clean all"
+    },
+    "completeMessage": {
+        "message": "Complete"
+    },
+    "settingsTitle": {
+        "message": "Settings"
+    }
+}

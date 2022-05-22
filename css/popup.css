@@ -1,0 +1,110 @@
+html {
+	width: 260px !important;
+	height: 300px !important;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background: #005b9f;
+	display: table;
+}
+
+.container {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+.buttons {
+	display: inline-grid;
+	padding: 20px;
+}
+
+.mdl-button--multiline {
+	height: auto;
+	line-height: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.mdl-button,
+.mdl-textfield__input {
+	margin-bottom: 20px;
+}
+
+.mdl-textfield__input {
+	/*background-color: rgba(255, 255, 255, 50);*/
+	color: #fff
+}
+
+.mdl-textfield__input option {
+	color: #000;
+}
+
+#settings {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.button-round {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 150px;
+	height: 150px;
+	color: white;
+}
+
+.button-round_half {
+	width: 100%;
+	height: 50%;
+	border: 2px solid #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.65em;
+    font-family: 'Montserrat';
+}
+
+.button-round_half-top {
+	border-top-left-radius: 150px;
+	border-top-right-radius: 150px;
+	border-width: 0;
+	padding-top: 5px;
+	background: #014f8a;
+}
+
+.button-round_half-bottom {
+	border-bottom-left-radius: 150px;
+	border-bottom-right-radius: 150px;
+	border-width: 0;
+	padding-bottom: 5px;
+	background: #014f8a;
+}
+
+.button-round_half-top:hover {
+	background: #045694;
+}
+
+.button-round_half-bottom:hover {
+	background: #045694;
+}
+
+.button-round_half-top:active, .button-round_half-bottom:active {
+	background: #024882;
+}
+
+.time-select {
+	position: absolute;
+    bottom: 10;
+    margin-bottom: 0;
+    width: 240px;
+    left: 10px;
+}

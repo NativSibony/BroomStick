@@ -1,0 +1,87 @@
+body {
+	background-color: rgb(248, 249, 250);
+}
+
+.page-content {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	max-width: 680px;
+	padding-bottom: 20px;
+}
+
+.page-content > * {
+	width: 100% !important;
+}
+
+.title {
+	color: rgb(97, 97, 97);
+	font-size: 13px;
+	font-weight: 550;
+	margin: 0px;
+	margin-top: 7px;
+}
+
+.settings-block {
+	table-layout: fixed;
+	word-wrap: break-word !important;
+	width: 100%;
+	border-top: 0 !important;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+.settings-block td:first-of-type {
+	text-align: left;
+	width: 75%;
+	max-width: 75%;
+}
+
+.settings-block td:nth-child(2) {
+	padding-left: 0px;
+}
+
+.settings-block td {
+	text-align: right;
+}
+
+.settings-block td > * {
+	width: auto !important;
+}
+
+.sub-label {
+	color: #757575;
+	font-weight: 400;
+	margin-top: 5px;
+}
+
+.settings-block td > select {
+	width: 100% !important;
+}
+
+.settings-block tr.clickable:hover {
+	background: none !important;
+	cursor: pointer;
+}
+
+.mdl-data-table td {
+	border-top: 0 !important;
+}
+
+header {
+	height: 200px;
+	background: #005b9f;
+}
+
+.mdl-progress {
+	position: fixed;
+	z-index: 123;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.mdl-data-table {
+	white-space: normal;
+}

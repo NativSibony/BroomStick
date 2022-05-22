@@ -1,0 +1,40 @@
+<html>
+    <head>
+
+        <link rel="stylesheet" href="../css/material.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/popup.css"></link>
+        <link rel="stylesheet" type="text/css" href="../css/fonts.css"></link>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="buttons">
+                <div class="button-round">
+                    <div class="button-round_half button-round_half-top" data-i18n="popClearSite">
+                        Clear this site
+                    </div>
+                    <div class="button-round_half button-round_half-bottom" data-i18n="popClearAll">
+                        Clear all
+                    </div>
+                </div>
+            </div>
+
+            <select class="time-select mdl-textfield__input" id="period">
+                <option value="1" data-i18n="optGeneralPeriodHour">Last hour</option>
+                <option value="24" data-i18n="optGeneralPeriodDay">Last 24 hours</option>
+                <option value="168" data-i18n="optGeneralPeriodWeek">Last 7 days</option>
+                <option value="672" data-i18n="optGeneralPeriodMonth">Last 4 weeks</option>
+                <option value="all" data-i18n="optGeneralPeriodAllTime">All time</option>
+            </select>
+        </div>
+
+        <button class="mdl-button mdl-js-button mdl-button--icon" id="settings">
+            <img src="../images/ic_settings_24px.svg">
+        </button>
+
+        <script src="../js/material.min.js"></script>
+        <script src="../js/jquery.slim.min.3.3.1.js"></script>
+        <script type="text/javascript" src="../js/popup.js"></script>
+
+    </body>
+</html>
